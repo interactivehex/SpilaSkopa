@@ -20,8 +20,8 @@
 body {
     display: flex;
     flex-direction: column;
-    background: url(images/bg.png) repeat;
-    background-size: 100vh;
+    background: url(images/bg.png) no-repeat;
+    background-size: 100%;
     min-height: 100vh; /* Changed from height to min-height */
 }
 
