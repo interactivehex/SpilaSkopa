@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -113,7 +114,7 @@ section.wave-section .wave {
     left: 0;
     width: 100%;
     height: 50px; /* Adjust height as needed */
-    background: url(images/wave.png);
+    background: url(images/wavepurple.png);
     background-size: 500px 50px;
     rotate: 180deg;
 }
@@ -134,27 +135,42 @@ section.wave-section .wave.wave1 {
 .discontrolled {
     width: 100%;
     padding: 20px;
-    background-color: #ffc500;
+    background-color: #ffc500;  
 }
 
 .discontrolled-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 50%;
 }
 
 .discontrolled-playdate {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 30%;
     filter: drop-shadow(0 0 20px #00000090);
+}
+
+.about-discontrolled {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.discontrolled-jam {
+    width: 100%;
+    padding: 20px;
+    background-color: #000000;
 }
 
 .screenshots {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    align-content: center;
+    grid-auto-flow: column;
     grid-gap: 40px;
     margin-top: 60px;
 }
@@ -162,7 +178,53 @@ section.wave-section .wave.wave1 {
 .screenshots img {
     width: 300px;
     border-radius: 10px;
+    border: 4px solid #ffffff;
+}
+
+.press {
+    margin-top: 30px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.press img {
+    width: 300px;
+}
+
+.disabled {
+    filter: brightness(50%);
+    cursor: not-allowed;
+}
+
+section.wave-section-yellow {
     position: relative;
+    width: 100%;
+    height: 10vh; /* Adjust height as needed */
     overflow: hidden;
-    border: 4px solid #000000;
+    background-color: #000000; /* Same color as .discontrolled */
+}
+
+section.wave-section-yellow .wave {
+    position: absolute;
+    rotate: 0deg;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust height as needed */
+    background: url(images/waveyellow.png);
+    background-size: 500px 50px;
+    rotate: 180deg;
+}
+
+section.wave-section-yellow .wave.wave1 {
+    animation: animate2 10s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -500px;
+    }
 }
