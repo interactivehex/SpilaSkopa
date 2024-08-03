@@ -23,7 +23,8 @@ body {
     flex-direction: column;
     background: url(images/bg.png) no-repeat;
     background-size: 100%;
-    min-height: 100vh; /* Changed from height to min-height */
+    background-color: #220036;
+    min-height: 100vh; 
 }
 
 .container{
@@ -48,7 +49,7 @@ header {
 section {
     position: relative;
     width: 100%;
-    height: 10vh; /* Adjusted to fit the new wave height */
+    height: 10vh; 
     overflow: hidden;
 }
 
@@ -58,9 +59,9 @@ section .wave {
     top: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Reduced height for smaller amplitude */
+    height: 50px; 
     background: url(images/wave.png);
-    background-size: 500px 50px; /* Adjusted to match the new height */
+    background-size: 500px 50px;
 }
 
 section .wave.wave1 {
@@ -79,7 +80,7 @@ section .wave.wave1 {
 .parallax {
     position: relative;
     width: 100%;
-    height: 78vh; /* Adjusted to fill the remaining height */
+    height: 78vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,9 +103,9 @@ section .wave.wave1 {
 section.wave-section {
     position: relative;
     width: 100%;
-    height: 10vh; /* Adjust height as needed */
+    height: 10vh; 
     overflow: hidden;
-    background-color: #ffc500; /* Same color as .discontrolled */
+    background-color: #ffc500; 
 }
 
 section.wave-section .wave {
@@ -113,7 +114,7 @@ section.wave-section .wave {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Adjust height as needed */
+    height: 50px;
     background: url(images/wavepurple.png);
     background-size: 500px 50px;
     rotate: 180deg;
@@ -160,6 +161,12 @@ section.wave-section .wave.wave1 {
     font-size: 30px;
 }
 
+
+.about-discontrolled a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .discontrolled-jam {
     width: 100%;
     padding: 20px;
@@ -199,9 +206,9 @@ section.wave-section .wave.wave1 {
 section.wave-section-yellow {
     position: relative;
     width: 100%;
-    height: 10vh; /* Adjust height as needed */
+    height: 10vh;
     overflow: hidden;
-    background-color: #000000; /* Same color as .discontrolled */
+    background-color: #000000;
 }
 
 section.wave-section-yellow .wave {
@@ -210,21 +217,126 @@ section.wave-section-yellow .wave {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50px; /* Adjust height as needed */
+    height: 50px;
     background: url(images/waveyellow.png);
     background-size: 500px 50px;
     rotate: 180deg;
 }
 
-section.wave-section-yellow .wave.wave1 {
-    animation: animate2 10s linear infinite;
+section.wave-section-black {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    background-color: #12aadc;
 }
 
-@keyframes animate3 {
-    0% {
-        background-position-x: 0;
-    }
-    100% {
-        background-position-x: -500px;
-    }
+section.wave-section-black .wave {
+    position: absolute;
+    rotate: 0deg;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url(images/waveblack.png);
+    background-size: 500px 50px;
+    rotate: 180deg;
+}
+
+.about {
+    width: 100%;
+    padding: 20px;
+    background-color: #12aadc;
+}
+
+.about-header {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.about-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.about-list div {
+    background: #ffffff;
+    padding: 40px;
+    font-size: 13px;
+    font-size: 300;
+    border-radius: 30px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.about-list div:hover {
+    background: #d8d8d8;
+    transform: translateY(-10px);
+}
+
+.about-list div i {
+    font-size: 40px;
+    color: #12aadc;
+    margin-bottom: 15px;
+}
+
+.about-list div h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.about-list div a {
+    text-decoration: none;
+    color: #12aadc;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px 0;
+    background: #000000;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+footer h1 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+footer p a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 7px;
+    text-align: center;
+    color: #ffffff;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a:hover {
+    color: #dc12c4;
+    transform: translateY(-3px);
 }

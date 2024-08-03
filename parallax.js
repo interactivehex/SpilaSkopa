@@ -1,5 +1,9 @@
 document.addEventListener("mousemove", parallax);
+
 function parallax(e) {
+    if (window.innerWidth < 600) {
+        return;
+    }
     document.querySelectorAll(".object").forEach(function(move) {
         var moving_value = move.getAttribute("data-value");
         var x = (e.clientX * moving_value) / 250;
